@@ -258,10 +258,6 @@ export class VerifyNegatable {
     public baselineMapCode(ranges: FourSlash.Range[][], changes: string[] = []): void {
         this.state.baselineMapCode(ranges, changes);
     }
-
-    public getImports(fileName: string, imports: string[]): void {
-        return this.state.verifyGetImports(fileName, imports);
-    }
 }
 
 export interface CompletionsResult {
@@ -2052,9 +2048,4 @@ export interface RenameOptions {
     readonly findInComments?: boolean;
     readonly providePrefixAndSuffixTextForRename?: boolean;
     readonly quotePreference?: "auto" | "double" | "single";
-}
-
-export interface VerifyGetImportsOptions {
-    fileName: string;
-    imports: string[];
 }
